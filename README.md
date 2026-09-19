@@ -1,6 +1,7 @@
 # YAML Clean • In-Browser YAML Validator & Anchor Manager
 
 [![CI](https://github.com/smford/yaml-web-validator/actions/workflows/ci.yml/badge.svg)](https://github.com/smford/yaml-web-validator/actions/workflows/ci.yml)
+[![Release](https://github.com/smford/yaml-web-validator/actions/workflows/release.yml/badge.svg)](https://github.com/smford/yaml-web-validator/actions/workflows/release.yml)
 [![Deploy to GitHub Pages](https://github.com/smford/yaml-web-validator/actions/workflows/deploy.yml/badge.svg)](https://github.com/smford/yaml-web-validator/actions/workflows/deploy.yml)
 
 ---
@@ -80,6 +81,22 @@ npm run build
 # Preview production build locally
 npm run preview
 ```
+
+---
+
+## Semantic Versioning & Releases
+
+This project uses [Semantic Release](https://github.com/semantic-release/semantic-release) and adheres to [Conventional Commits](https://www.conventionalcommits.org/).
+
+When a pull request is merged into `main`, GitHub Actions automatically:
+1. Determines the next semantic version number based on commit messages:
+   - `fix:` / `perf:` / `refactor:` -> **Patch** (`v1.0.X`)
+   - `feat:` -> **Minor** (`v1.X.0`)
+   - `BREAKING CHANGE:` -> **Major** (`vX.0.0`)
+2. Updates `CHANGELOG.md` with categorized release notes.
+3. Bumps version in `package.json` and `package-lock.json`.
+4. Creates a Git tag and publishes a **GitHub Release**.
+5. Packages and attaches the production bundle (`release-dist.zip`) directly to the GitHub release assets.
 
 ---
 
