@@ -102,4 +102,4 @@ When a pull request is merged into `main`, GitHub Actions automatically:
 
 ## License
 
-MIT License.
+This project is open-source software licensed under the [GNU Affero General Public License v3.0 (AGPLv3)](./LICENSE).
