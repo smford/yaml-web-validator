@@ -1,0 +1,17 @@
+{
+  "name": "YAML Clean",
+  "short_name": "YAML Clean",
+  "description": "100% Client-Side In-Browser YAML Validator & Anchor Manager",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#09090b",
+  "theme_color": "#09090b",
+  "icons": [
+    {
+      "src": "./favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
