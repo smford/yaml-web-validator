@@ -3,6 +3,7 @@
 [![CI](https://github.com/smford/yaml-web-validator/actions/workflows/ci.yml/badge.svg)](https://github.com/smford/yaml-web-validator/actions/workflows/ci.yml)
 [![Release](https://github.com/smford/yaml-web-validator/actions/workflows/release.yml/badge.svg)](https://github.com/smford/yaml-web-validator/actions/workflows/release.yml)
 [![Deploy to GitHub Pages](https://github.com/smford/yaml-web-validator/actions/workflows/deploy.yml/badge.svg)](https://github.com/smford/yaml-web-validator/actions/workflows/deploy.yml)
+[![Dependabot](https://img.shields.io/badge/dependabot-enabled-blue.svg?logo=dependabot)](https://github.com/smford/yaml-web-validator)
 
 ---
 
@@ -43,7 +44,7 @@
 - **Editor**: [CodeMirror 6](https://codemirror.net/) with `@codemirror/lang-yaml`
 - **YAML Engine**: [`yaml`](https://eemeli.org/yaml/) (YAML 1.2 & 1.1 merge keys with CST/AST traversal)
 - **Testing**: [Vitest](https://vitest.dev/)
-- **CI/CD**: GitHub Actions (Lint, Test, Build, and automated GitHub Pages deployment)
+- **CI/CD & Automation**: GitHub Actions (Lint, Test, Build, GitHub Pages deployment, Semantic Release) & Dependabot
 
 ---
 
