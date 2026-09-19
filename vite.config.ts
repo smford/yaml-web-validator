@@ -9,15 +9,19 @@ export default defineConfig({
     chunkSizeWarningLimit: 800,
     rollupOptions: {
       output: {
-        manualChunks: {
-          'vendor-react': ['react', 'react-dom'],
-          'vendor-codemirror': [
-            '@uiw/react-codemirror',
-            '@codemirror/lang-yaml',
-            '@codemirror/theme-one-dark',
-          ],
-          'vendor-yaml': ['yaml'],
-          'vendor-icons': ['lucide-react'],
+        manualChunks(id: string) {
+          if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
+            return 'vendor-react';
+          }
+          if (id.includes('@codemirror') || id.includes('@uiw/react-codemirror')) {
+            return 'vendor-codemirror';
+          }
+          if (id.includes('node_modules/yaml')) {
+            return 'vendor-yaml';
+          }
+          if (id.includes('lucide-react')) {
+            return 'vendor-icons';
+          }
         },
       },
     },
