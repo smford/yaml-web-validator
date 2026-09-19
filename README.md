@@ -5,6 +5,12 @@
 [![Deploy to GitHub Pages](https://github.com/smford/yaml-web-validator/actions/workflows/deploy.yml/badge.svg)](https://github.com/smford/yaml-web-validator/actions/workflows/deploy.yml)
 [![Dependabot](https://img.shields.io/badge/dependabot-enabled-blue.svg?logo=dependabot)](https://github.com/smford/yaml-web-validator)
 
+A modern, client-side YAML IDE built for DevOps, SREs, and developers to manage complex YAML anchors (`&`), aliases (`*`), and merge keys (`<<`), scan for plaintext secrets, and inspect real-time dereferenced diffs—all 100% in-browser with zero telemetry.
+
+<p align="center">
+  <img src="./docs/screenshots/dashboard-anchors.png" alt="YAML Clean Main Dashboard and Anchor Management" width="100%">
+</p>
+
 ---
 
 ## Key Features
@@ -20,19 +26,25 @@
 - **Merge Key (`<<`) Support**: Full support for YAML merge keys (`<<: *anchor` and `<<: [*a, *b]`), displaying inherited structures.
 - **Dead Code & Dangling Reference Detection**: Highlights unused anchors and flags dangling aliases as errors.
 
-### 3. Multi-Document Streams & Kubernetes Ready
-- Full support for multi-document YAML files separated by `---` (such as Kubernetes manifests and Helm charts).
-- Accurate document-aware line and column error reporting.
+### 3. Side-by-Side Visual Diff & Resolved Exports
+- **Real-Time Visual Diff**: Compare raw inheritance YAML against fully dereferenced, evaluated output side-by-side.
+- **Multi-Format Export**: Export clean, dereferenced YAML or evaluated JSON ready for CI/CD pipelines.
 
-### 4. Shift-Left Security & Secret Scanner
-- Scans YAML files for accidentally committed plaintext secrets, API keys, private keys, and authentication tokens with remediation recommendations.
+<p align="center">
+  <img src="./docs/screenshots/side-by-side-diff.png" alt="YAML Clean Side-by-Side Visual Diff Mode" width="100%">
+</p>
+
+### 4. Shift-Left Security & Plaintext Secret Scanner
+- **Credential Detection**: Automatically identifies accidentally committed AWS keys, GitHub PATs, private keys, database passwords, and bearer tokens.
+- **Remediation Hints**: Contextual advice on migrating to environment variables or secret vaults.
 
 ### 5. In-Editor Inline Linter & Diagnostics
-- Direct `@codemirror/lint` integration providing inline squiggly underlines, gutter warning/error icons, and hover tooltips.
+- **Live Squigglies & Gutter Markers**: Powered by `@codemirror/lint` with tooltip explanations and one-click line navigation.
+- **Multi-Document Streams**: Full support for multi-document YAML files separated by `---` (such as Kubernetes manifests and Helm charts).
 
-### 6. Side-by-Side Visual Diff & Resolved Exports
-- **Diff View**: Compare raw YAML against resolved, dereferenced output side-by-side.
-- **One-Click Export**: Export clean, dereferenced YAML or evaluated JSON ready for CI/CD pipelines.
+<p align="center">
+  <img src="./docs/screenshots/security-diagnostics.png" alt="YAML Clean Secret Scanner and Inline Diagnostics" width="100%">
+</p>
 
 ---
 
