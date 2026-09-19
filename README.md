@@ -7,6 +7,8 @@
 
 A modern, client-side YAML IDE built for DevOps, SREs, and developers to manage complex YAML anchors (`&`), aliases (`*`), and merge keys (`<<`), scan for plaintext secrets, and inspect real-time dereferenced diffs—all 100% in-browser with zero telemetry.
 
+**Live Demo**: [http://stephenford.org/yaml-web-validator/](http://stephenford.org/yaml-web-validator/)
+
 <p align="center">
   <img src="./docs/screenshots/dashboard-anchors.png" alt="YAML Clean Main Dashboard and Anchor Management" width="100%">
 </p>
